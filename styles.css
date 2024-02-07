@@ -1,0 +1,156 @@
+/* styles.css */
+
+/* Apply styles to the navigation bar */
+.navbar {
+    position: fixed; /* Make the navigation bar fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it full width */
+    height: 60px; /* Adjust the height according to your design */
+    background-color: rgba(51, 51, 51, 0.3); /* Adjust the alpha value to set the opacity */
+    z-index: 1000; /* Ensure the navigation bar stays above other content */
+}
+
+.navbar-text {
+    color: white; /* Set the color of the text */
+    font-family: "Sacramento", cursive;
+    font-size: 37px; /* Adjust the font size */
+    font-weight: normal; /* Set the font weight */
+    position: absolute; /* Use absolute positioning */
+    top: 45%; /* Position the logo vertically in the middle */
+    left: 50%; /* Position the logo horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the logo */
+}
+
+.progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px; /* Adjust the height of the progress bar */
+    width: 0;
+    background: linear-gradient(to right, #00344c, #60a2b8); /* Define your gradient colors */
+    z-index: 1001; /* Ensure the navigation bar stays above other content */
+}
+
+/* Style the list (ul) */
+.navbar ul {
+    list-style-type: none; /* Remove default bullets */
+    margin: 0;
+    padding: 17px;
+    text-align: center; /* Center-align the list items */
+}
+
+/* Style the list items (li) */
+.navbar ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add some spacing between items */
+}
+
+/* Style the links (a) */
+.navbar ul li a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold font */
+    padding: 5px 10px; /* Add padding to the links */
+}
+
+/* Change link color on hover */
+.navbar ul li a:hover {
+    background-color: #5555; /* Darken background color on hover */
+}
+
+/* <uniquifier > : Use a uniquifier for the class name */
+/* <weight > : Use a value from 200 to 700 */
+
+body, html {
+    padding-top: 70px; /* Adjust the value to match the height of your navigation bar */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-image: url('images/building.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-attachment: scroll; /* Allow the background image to scroll with the content */
+}
+
+.content {
+    /* Add your content here */
+    /* Ensure content extends beyond the initial viewport height */
+    height: 1700px; /* Adjust height as needed */
+}
+
+h1, h2, h3 {
+    margin: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    margin: 100px;
+}
+
+.custom-element {
+    font-family: 'Oswald', sans-serif;
+}   
+
+.sacramento-regular {
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fondamento-regular {
+    font-family: "Fondamento", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fondamento-regular-italic {
+    font-family: "Fondamento", cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.logo {
+    width: 75px; /* Adjust the width according to your logo size */
+    height: auto; /* Maintain aspect ratio */
+    position: center; /* Float the logo to the left */
+    padding-left: 0px; /* Adjust padding to move the logo further towards the middle */
+    z-index: 2200; /* Ensure the navigation bar stays above other content */
+
+    position: absolute; /* Use absolute positioning */
+    top: 75%; /* Position the logo vertically in the middle */
+    left: 40%; /* Position the logo horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the logo */
+}
+
+#menu {
+    position
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    color: #003959;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-family: "Fondamento", cursive;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms ease;
+}
+
+#menu-items {
+    margin-left: clamp(2rem, 5vw, 48rem);
+}
+
+#menu-items:hover > .menu-item {
+    opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+    opacity: 1;
+}
