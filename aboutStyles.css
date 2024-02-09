@@ -1,5 +1,4 @@
 
-
 body {
     
   background: linear-gradient(to bottom right, #250a4f, #810d81);
@@ -24,15 +23,12 @@ p {
     font-size: 1rem;
 }
 
-
 .container {
     background-color: aqua;
     width: 100%;
     max-width: 1200px; /* Adjust as needed */
     margin: 0 auto; /* Center the container */
   }  
-
-
 
 .image-container {
     display: inline-block;
