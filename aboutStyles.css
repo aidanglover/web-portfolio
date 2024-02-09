@@ -1,0 +1,86 @@
+
+
+body {
+    
+  background: linear-gradient(to bottom right, #250a4f, #810d81);
+  background-size: 100% 100%; /* Ensure the gradient covers the entire screen */
+  background-repeat: no-repeat; /* Prevent the gradient from repeating */
+  background-attachment: fixed; /* Fixed background so it moves with the page content */
+}  
+
+h1, h2, h3 {
+    margin: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600; /* Adjusted font weight */
+    font-style: normal; /* Adjusted font style */
+    font-size: 2rem; /* Adjusted font size */
+}
+
+p {
+    margin: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+
+.container {
+    background-color: aqua;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+  }  
+
+
+
+.image-container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .image-container.center .image-overlay img {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* Set z-index behind the first image */
+  }
+
+  .image-overlay {
+    position: relative;
+    margin: 10px;
+    width: fit-content;
+  }
+  
+  .image-overlay img {
+    width: 550px; /* Adjust according to your image size */
+    transition: all 0.3s ease;
+    box-shadow: -15px -15px 110px rgba(0, 0, 0, 0.7); /* Add shadow */
+  }
+  
+  .image-overlay .image-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #fff;
+    transform: translateY(100%);
+    transition: all 0.5s ease, opacity 0.1s ease;
+    opacity: 0; /* Initially hide the text */
+  }
+  
+  .image-overlay:hover img {
+    transform: scale(1.1); /* Enlarge image */
+    filter: grayscale(100%) brightness(50%); /* Apply grayscale and reduce brightness */
+    z-index: 1;
+  }
+  
+  .image-overlay:hover .image-details {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  
