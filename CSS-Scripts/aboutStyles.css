@@ -1,24 +1,23 @@
 
 body {
-    
   background: linear-gradient(to bottom right, #250a4f, #810d81);
-  background-size: 100% 100%; /* Ensure the gradient covers the entire screen */
-  background-repeat: no-repeat; /* Prevent the gradient from repeating */
-  background-attachment: fixed; /* Fixed background so it moves with the page content */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }  
 
 h1, h2, h3 {
     margin: 30px;
     font-family: 'Oswald', sans-serif;
-    font-weight: 600; /* Adjusted font weight */
-    font-style: normal; /* Adjusted font style */
-    font-size: 2rem; /* Adjusted font size */
+    font-weight: 800; 
+    font-style: normal; 
+    font-size: 2rem;
 }
 
 p {
     margin: 30px;
     font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-style: normal;
     font-size: 1rem;
 }
@@ -26,8 +25,8 @@ p {
 .container {
     background-color: aqua;
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto; /* Center the container */
+    max-width: 1200px;
+    margin: 0 auto;
   }  
 
 .image-container {
@@ -41,7 +40,7 @@ p {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1; /* Set z-index behind the first image */
+    z-index: -1; 
   }
 
   .image-overlay {
@@ -51,9 +50,9 @@ p {
   }
   
   .image-overlay img {
-    width: 550px; /* Adjust according to your image size */
+    width: 550px; 
     transition: all 0.3s ease;
-    box-shadow: -15px -15px 110px rgba(0, 0, 0, 0.7); /* Add shadow */
+    box-shadow: -20px -15px 110px rgba(0, 0, 0, 0.7); 
   }
   
   .image-overlay .image-details {
@@ -65,12 +64,12 @@ p {
     color: #fff;
     transform: translateY(100%);
     transition: all 0.5s ease, opacity 0.1s ease;
-    opacity: 0; /* Initially hide the text */
+    opacity: 0; 
   }
   
   .image-overlay:hover img {
-    transform: scale(1.1); /* Enlarge image */
-    filter: grayscale(100%) brightness(50%); /* Apply grayscale and reduce brightness */
+    transform: scale(1.1); 
+    filter: grayscale(100%) brightness(50%);
     z-index: 1;
   }
   
@@ -79,4 +78,6 @@ p {
     opacity: 1;
   }
 
-  
+
+
+
