@@ -20,7 +20,7 @@ document.addEventListener('scroll', function () {
 const scrollThreshold = 0; 
 const scrollPosition = window.scrollY;
 const amountToMove = Math.max(0, (scrollPosition - scrollThreshold) / 1.2); // Calculate the amount to move the image based on the scroll position
-secondImageContainer.style.transform = `translateY(${amountToMove}px)`; // Move the second image down
+    secondImageContainer.style.transform = `translateY(${amountToMove}px)` +'scale(0.85)'; // Move the second image down
 });
 
 //#endregion
@@ -63,7 +63,7 @@ const firstImageContainer = document.querySelectorAll('.image-container')[0];
 const secondImageContainer = document.querySelectorAll('.image-container')[1];
 const thirdImageContainer = document.querySelectorAll('.image-container')[2];
 const fourthImageContainer = document.querySelectorAll('.image-container')[3];
-const fifthhImageContainer = document.querySelectorAll('.image-container')[4];
+const fifthImageContainer = document.querySelectorAll('.image-container')[4];
 
 
 // #region Image Properties
@@ -72,41 +72,42 @@ firstImageContainer.style.position = 'absolute';
 secondImageContainer.style.position = 'absolute';
 thirdImageContainer.style.position = 'absolute';
 fourthImageContainer.style.position = 'absolute';
-fifthhImageContainer.style.position = 'absolute';
+fifthImageContainer.style.position = 'absolute';
 // Positioning
 firstImageContainer.style.top = '20%'; 
 secondImageContainer.style.top = '25%'; 
 thirdImageContainer.style.top = '60%';
 fourthImageContainer.style.top = '100%';
-fifthhImageContainer.style.top = '150%';
+fifthImageContainer.style.top = '150%';
 
-secondImageContainer.style.left = '38%'; // Adjust as necessary
-thirdImageContainer.style.left = '55%';  // Adjust as necessary
-fourthImageContainer.style.left = '15%'; // Adjust as necessary
-fifthhImageContainer.style.left = '50%'; // Adjust as necessary
+secondImageContainer.style.left = '35%'; 
+thirdImageContainer.style.left = '55%';
+fourthImageContainer.style.left = '15%';
+fifthImageContainer.style.left = '50%';
 // Scale
+firstImageContainer.style.transform = 'scale(0.9)';
+// secondImageContainer.style.transform = 'scale(0.65)';
 thirdImageContainer.style.transform = 'scale(0.7)';
-fourthImageContainer.style.transform = 'scale(0.9)';
-secondImageContainer.style.transform = 'scale(0.9)';
-fifthhImageContainer.style.transform = 'scale(0.8)';
+fourthImageContainer.style.transform = 'scale(0.8)';
+fifthImageContainer.style.transform = 'scale(0.7)';
 // Initial Z
 firstImageContainer.style.zIndex = '2';
 secondImageContainer.style.zIndex = '1';
 thirdImageContainer.style.zIndex = '1';
 fourthImageContainer.style.zIndex = '1';
-fifthhImageContainer.style.zIndex = '1';
+fifthImageContainer.style.zIndex = '1';
 // Z Transition
 firstImageContainer.style.transition = 'z-index 0.4s ease';
 secondImageContainer.style.transition = 'z-index 0.4s ease';
 thirdImageContainer.style.transition = 'z-index 0.4s ease';
 fourthImageContainer.style.transition = 'z-index 0.4s ease';
-fifthhImageContainer.style.transition = 'z-index 0.4s ease';
+fifthImageContainer.style.transition = 'z-index 0.4s ease';
 // z value controller for hover
 const initialZIndexFirst = getComputedStyle(firstImageContainer).zIndex;
 const initialZIndexSecond = getComputedStyle(secondImageContainer).zIndex;
 const initialZIndexThird = getComputedStyle(thirdImageContainer).zIndex;
 const initialZIndexFourth = getComputedStyle(fourthImageContainer).zIndex;
-const initialZIndexFifth = getComputedStyle(fifthhImageContainer).zIndex;
+const initialZIndexFifth = getComputedStyle(fifthImageContainer).zIndex;
 //#region Image Z value movers
 firstImageContainer.addEventListener('mouseenter', function() {
     firstImageContainer.style.zIndex = '2';
@@ -133,10 +134,10 @@ fourthImageContainer.addEventListener('mouseleave', function() {
     fourthImageContainer.style.zIndex = initialZIndexFourth;
 });
 fifthhImageContainer.addEventListener('mouseenter', function() {
-    fifthhImageContainer.style.zIndex = '2';
+    fifthImageContainer.style.zIndex = '2';
 })
 fifthhImageContainer.addEventListener('mouseleave', function() {
-    fifthhImageContainer.style.zIndex = initialZIndexFifth;
+    fifthImageContainer.style.zIndex = initialZIndexFifth;
 })
 //#endregion
 
